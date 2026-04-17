@@ -1,0 +1,219 @@
+/* =========================
+   VARIABLES DE DISEÑO
+   ========================= */
+/* Aquí defines todos los colores del sistema.
+   Esto permite cambiar el diseño completo fácilmente */
+:root {
+  --blue: #2f5fb3;          /* Color principal (hero + about) */
+
+  --heading: #0f172a;       /* Color de títulos */
+  --text: #1f2937;          /* Texto principal */
+  --gray: #6b7280;          /* Texto secundario */
+
+  --nav-text: rgba(255,255,255,0.85); /* Texto navbar (suavizado) */
+  --nav-hover: #ffffff;     /* Hover navbar */
+
+  --beige: #f4efe9;         /* Fondo general */
+  --pink: #d99aa5;          /* Botón contacto */
+  --border: #c7d2fe;        /* Bordes de cards */
+}
+
+/* =========================
+   BASE GLOBAL
+   ========================= */
+/* Estilos generales del sitio */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--beige);
+  color: var(--text);
+  margin-top: 70px; /* Compensa navbar fijo */
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+/* Fondo del navbar */
+.custom-navbar {
+  background: #0b1a0f;
+}
+
+/* Links del navbar */
+.navbar .nav-link {
+  color: var(--nav-text) !important;
+  transition: 0.2s;
+}
+
+/* Hover del navbar */
+.navbar .nav-link:hover {
+  color: var(--nav-hover) !important;
+}
+
+/* Logo / nombre */
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* =========================
+   TIPOGRAFÍA
+   ========================= */
+/* Títulos principales */
+h1, h2 {
+  color: var(--heading);
+  letter-spacing: -0.5px; /* Ajuste fino tipo Figma */
+}
+
+/* Excepción: títulos en fondos oscuros */
+.hero h1,
+.about h2 {
+  color: white;
+}
+
+/* =========================
+   HERO (SECCIÓN PRINCIPAL)
+   ========================= */
+.hero {
+  background: var(--blue);
+  padding: 140px 0 100px;
+  color: white;
+}
+
+/* Texto dentro del hero */
+.hero p {
+  color: rgba(255,255,255,0.85); /* Blanco suavizado */
+}
+
+/* Texto pequeño superior */
+.tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+/* =========================
+   DIVIDERS (LÍNEAS)
+   ========================= */
+/* Línea decorativa debajo de títulos */
+.divider {
+  width: 50px;
+  height: 2px;
+  background: var(--heading);
+  margin: 16px 0;
+}
+
+/* Versión blanca (para fondos oscuros) */
+.divider.light {
+  background: white;
+}
+
+/* =========================
+   PROYECTOS
+   ========================= */
+.projects {
+  padding: 90px 0;
+}
+
+/* Card individual */
+.project-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* Efecto hover (levanta la card) */
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Imagen de la card */
+.project-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Contenido interno */
+.project-card .content {
+  padding: 16px;
+}
+
+/* Texto secundario */
+.project-card p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* Link */
+.project-card a {
+  color: var(--blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* =========================
+   ABOUT (SECCIÓN AZUL)
+   ========================= */
+.about {
+  background: var(--blue);
+  color: white;
+  padding: 100px 0;
+}
+
+/* =========================
+   CONTACTO
+   ========================= */
+.contact {
+  padding: 100px 0;
+}
+
+/* Inputs y textarea */
+.form input,
+.form textarea {
+  width: 100%;
+  border: 1px solid #93c5fd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* Botón de envío */
+.form button {
+  width: 100%;
+  background: var(--pink);
+  border: none;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  background: #0b1a0f;
+  color: white;
+  padding: 40px 0;
+}
+
+/* Texto del footer */
+.footer p {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Iconos sociales */
+.social i {
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px; /* Reduce título */
+  }
+}
